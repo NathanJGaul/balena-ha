@@ -1,0 +1,17 @@
+version: '2'
+
+volumes:
+  volume_homeassistant:
+
+services:
+
+  homeassistant:
+    build: 
+      context: ./homeassistant # need to change
+      dockerfile: Dockerfile.production
+    volumes:
+      - volume_homeassistant:/config
+    privileged: true
+    restart: always
+    ports: 
+      - 8123:8123

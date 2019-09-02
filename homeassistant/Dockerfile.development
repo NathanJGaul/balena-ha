@@ -1,0 +1,5 @@
+FROM homeassistant/home-assistant:0.95.1
+LABEL author "Nathan Gaul"
+LABEL maintainer "nathanjgaul@gmail.com"
+
+COPY config /config
